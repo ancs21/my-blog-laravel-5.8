@@ -1,4 +1,10 @@
-
 test.cloud-air.com:8088 {
-    reverse_proxy nginx:8088
+    reverse_proxy nginx:8089 {
+        header_up X-Scheme https
+    }
+    tls {
+        issuer acme {
+            disable_tlsalpn_challenge
+        }
+    }
 }
