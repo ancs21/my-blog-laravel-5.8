@@ -1,0 +1,4 @@
+
+test.cloud-air.com:8088 {
+    reverse_proxy nginx:8088
+}
